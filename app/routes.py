@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for
-from .forms import LoginForm
+from .forms import LoginForm, WordEvolutionForm
 from app import app
 
 route = app.route
@@ -27,6 +27,9 @@ def login():
 def instructions():
     return render_template(pages[2])
 
-@route('/word_editor')
-def word_editor():
+@route('/editor', methods=['GET', 'POST'])
+def editor():
+    form = WordEvolutionForm()
+    if form.validate_on_submit():
+        return 'Success'
     return render_template(pages[3])

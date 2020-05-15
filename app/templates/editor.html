@@ -3,6 +3,15 @@
 
 {% block content %}
 <div class='panel editor'>
-
+    <form method="get" action="">
+        {{form.hidden_tag()}}
+        <p>
+            {{form.word.label}} <br>
+            {{form.word(size=32)}}
+        </p>
+        <p>
+            {{form.evolve()}}
+        </p>
+    </form>
 </div>
 {% endblock %}
