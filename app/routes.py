@@ -10,9 +10,9 @@ pages = ['index.html',
          'word_editor.html']
 
 data = {
-    'menu': pages
+    'menu' : 'Home Login Documentation Editor'.split(),
+    'pages' : pages,
 }
-
 
 @route('/index')
 @route('/')

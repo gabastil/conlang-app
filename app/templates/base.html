@@ -10,7 +10,7 @@
         <div class='navigation'>
             <ul>
                 {% for item in data['menu'] %}
-                    <li><a href={{url_for(item)}}>{{item.split()[0]}}</a></li>
+                    <li><a href={{url_for(item)}}>{{item}}</a></li>
                 {% endfor %}
                 {% block navigation %}{% endblock %}
             </ul>
